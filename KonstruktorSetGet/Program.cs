@@ -44,6 +44,15 @@ namespace KonstruktorSetGet
             this.age = age;
         }
 
+        /// <summary>
+        /// A kutya adatainak megjelenítése stringként
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return name+" kutya "+ age+" éves.";
+        }
+
     }
     class Program
     {
