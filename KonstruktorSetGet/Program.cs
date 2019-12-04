@@ -62,6 +62,9 @@ namespace KonstruktorSetGet
             Dog r = new Dog("Rex");
             //Set metódussal kutya életkorának megadása
             r.setAge(2);
+            //Kutya adatainak kiírása a képernyőre
+            Console.WriteLine(r);
+            Console.ReadKey();
         }
     }
 }
