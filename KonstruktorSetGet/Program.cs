@@ -20,6 +20,16 @@ namespace KonstruktorSetGet
         /// A kutya életkora
         /// </summary>
         private int age;
+
+        ///Konstruktor
+        /// Konstruktor neve megegyezik az osztály nevével
+        /// Konstruktornak nincs visszatérési értéke
+        /// Konstroktor kívülről elérhető kell legyen
+        public Dog(string name)
+        {
+            this.name = name;
+        }
+
     }
     class Program
     {
