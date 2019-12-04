@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace KonstruktorSetGet
 {
+    /// <summary>
+    /// Dog osztály
+    /// </summary>
+    class Dog
+    {
+
+    }
     class Program
     {
         static void Main(string[] args)
