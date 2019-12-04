@@ -35,6 +35,15 @@ namespace KonstruktorSetGet
             this.name = name;
         }
 
+        /// <summary>
+        /// Set metódus a kutya életkorának megadására
+        /// </summary>
+        /// <param name="age">A kutya életkora</param>
+        public void setAge(int age)
+        {
+            this.age = age;
+        }
+
     }
     class Program
     {
