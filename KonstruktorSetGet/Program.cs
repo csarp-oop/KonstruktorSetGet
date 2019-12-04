@@ -11,7 +11,15 @@ namespace KonstruktorSetGet
     /// </summary>
     class Dog
     {
-
+        /// <summary>
+        /// Az osztály tulajdonságai (properties)
+        /// A kutya neve
+        /// </summary>
+        private string name;
+        /// <summary>
+        /// A kutya életkora
+        /// </summary>
+        private int age;
     }
     class Program
     {
