@@ -51,6 +51,8 @@ namespace KonstruktorSetGet
         {
             //Egy Dog objekutm példányosítása
             Dog r = new Dog("Rex");
+            //Set metódussal kutya életkorának megadása
+            r.setAge(2);
         }
     }
 }
