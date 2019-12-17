@@ -25,7 +25,16 @@ namespace KonstruktorSetGetWorkMethods_Car
         public void move(int km)
         {
             if (((consumption / 100) * km)< fuelQuantity)
-                 fuelQuantity -= (int) (consumption / 100) * km;
+                 fuelQuantity -= (int) (consumption / 100 * km);
+        }
+        public int getFuelQuantity()
+        {
+            return fuelQuantity;
+        }
+
+        public double getFuelPercent()
+        {
+            return (double) fuelQuantity / tankCapacity;
         }
     }
 
@@ -35,6 +44,13 @@ namespace KonstruktorSetGetWorkMethods_Car
 
         static void Main(string[] args)
         {
+            Car s = new Car("AAA-111");
+            s.tanking(20);
+            s.move(40);
+            Console.WriteLine("Tank állás:" + s.getFuelQuantity());
+            Console.WriteLine("Tank állás:" + s.getFuelPercent() * 100);
+            Console.ReadKey();
+
         }
     }
 }
