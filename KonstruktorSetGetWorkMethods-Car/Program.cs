@@ -21,11 +21,15 @@ namespace KonstruktorSetGetWorkMethods_Car
         {
             if (fuelQuantity + fuel <= tankCapacity)
                 fuelQuantity += fuel;
+            else
+                throw new Exception(fuelQuantity + fuel + " l tankolni nem lehet, mert az autó tankájának a mérete" + tankCapacity + " l.");
         }
         public void move(int km)
         {
             if (((consumption / 100) * km)< fuelQuantity)
                  fuelQuantity -= (int) (consumption / 100 * km);
+            else
+               throw new Exception((consumption / 100) * km + " km-et nem lehet megtenni, mert a tankban csak " + fuelQuantity + " l üzemanyag van ");
         }
         public int getFuelQuantity()
         {
@@ -45,8 +49,16 @@ namespace KonstruktorSetGetWorkMethods_Car
         static void Main(string[] args)
         {
             Car s = new Car("AAA-111");
-            s.tanking(20);
-            s.move(40);
+            try
+            {
+                s.tanking(20);
+                s.move(40);
+                s.move(500);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.WriteLine("Tank állás:" + s.getFuelQuantity());
             Console.WriteLine("Tank állás:" + s.getFuelPercent() * 100);
             Console.ReadKey();
