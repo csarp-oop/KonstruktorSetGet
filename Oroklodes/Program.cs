@@ -30,6 +30,19 @@ namespace Oroklodes
         }
     }
 
+    class Auto : Jarmu
+    {
+        private string rendszam;
+        private string szin;
+
+        public Auto(int x, int y,string rendszam, string szin)
+            :base(x,y)
+        {
+            this.rendszam = rendszam;
+            this.szin = szin;
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
