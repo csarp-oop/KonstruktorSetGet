@@ -65,7 +65,7 @@ namespace Oroklodes
     {
         private string szin;
 
-        public Kerekpar(int x, int y, string rendszam, string szin)
+        public Kerekpar(int x, int y, string szin)
             : base(x, y)
         {
             this.szin = szin;
@@ -86,7 +86,24 @@ namespace Oroklodes
         {
             Auto a = new Auto(0, 0, "AAA-001", "rózsaszín");
             a.menjFel();
+            Auto b = new Auto(5, 5, "BBB-001", "fehér");
+            Kerekpar c = new Kerekpar(0, 0, "piros");
+            Kerekpar d = new Kerekpar(1, 1, "sárga");
+            Kerekpar e = new Kerekpar(2, 2, "kék");
             Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+            Console.WriteLine(e);
+
+            List<Jarmu> jarmuvek = new List<Jarmu>();
+            jarmuvek.Add(a);
+            jarmuvek.Add(b);
+            jarmuvek.Add(c);
+            jarmuvek.Add(d);
+            jarmuvek.Add(e);
+
+
             Console.ReadKey();
         }
     }
